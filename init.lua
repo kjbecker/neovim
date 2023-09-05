@@ -25,6 +25,16 @@ require("mason-lspconfig").setup({
 require("lspconfig").lua_ls.setup {}
 require("lspconfig").rust_analyzer.setup {}
 
+
+--treesitter
+require("nvim-treesitter.configs").setup({
+	ensure_installed = {"python", "rust", "go", "sql"},
+	highlight = {
+		enable = true,
+	},
+})
+
+
 --Finally coire vim stuff
 vim.cmd.colorscheme("slate")
 vim.wo.number = true
